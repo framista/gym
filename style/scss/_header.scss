@@ -1,0 +1,131 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55vh;
+    background-color: $brown;
+    position: relative;
+    nav{
+        .hamburger{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-image: url("../images/hamburgerClosed.svg");
+            cursor: pointer;
+            transition: 1s linear;
+            &:hover{
+                background-color: white;
+            }
+        }
+        ul{
+            position: absolute;
+            top:20px;
+            left: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: calc(100vw - 60px);
+            height: 40px;
+            max-width: 500px;
+            font-family: $font-stack;
+            background-color: $orange;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            li{
+                list-style: none;
+                a{
+                    color: white;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    &:hover{
+                        color: $brown;
+                    }
+                }
+            }
+        }
+    }
+    .header__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 1;
+        color: white;
+        font-family: $font-stack;
+        padding: 30px;
+        h1 {
+            font-size: 60px;
+            font-weight: 600;
+            color: $orange;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.6;
+            letter-spacing: 1.4px;
+            text-align: center;
+            margin: 10px 0 20px;
+        }
+        button{
+            max-width: 400px;
+            border: none;
+            outline: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            background-color: $orange;
+            color: white;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 1s linear;
+            &:hover{
+                background-color: white;
+                color: $orange;
+                font-weight: 600;
+            }
+        }
+    }
+    .header__image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        box-shadow: 2px 5px 30px 0px rgba(50, 50, 50, 0.87);
+        border: 2px solid $orange;
+        border-radius: 20px;
+        overflow: hidden;
+        .content {
+            width: 100%;
+            height: 40vh;
+            background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            background-position: center;
+            background-size: cover;
+            animation: header 20s step-end infinite;
+        }
+        @keyframes header {
+            0%{
+                background-image: url("https://images.unsplash.com/photo-1550259979-ed79b48d2a30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=704&q=80");
+            }
+            25%{
+                background-image: url("https://images.unsplash.com/photo-1576511420003-e33641629f94?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+            }
+            50%{
+                background-image: url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+            }
+            100%{
+                background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            }
+        }
+    }
+}
