@@ -22,60 +22,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 55vh;
-  background-color: #332817;
+  background-color: #352918;
+  background: linear-gradient(350deg, rgba(135, 104, 60, 0.451155) 0%, #352918 60%);
   position: relative;
-}
-
-header nav .hamburger {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/hamburgerClosed.svg");
-  cursor: pointer;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-}
-
-header nav .hamburger:hover {
-  background-color: white;
-}
-
-header nav ul {
-  position: absolute;
-  top: 20px;
-  left: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: calc(100vw - 60px);
-  height: 40px;
-  max-width: 500px;
-  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  background-color: #cc5803;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-header nav ul li {
-  list-style: none;
-}
-
-header nav ul li a {
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-header nav ul li a:hover {
-  color: #332817;
 }
 
 header .header__description {
@@ -99,7 +48,7 @@ header .header__description {
           flex: 1;
   color: white;
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  padding: 30px;
+  padding: 0px 30px;
 }
 
 header .header__description h1 {
@@ -141,7 +90,6 @@ header .header__description button {
 header .header__description button:hover {
   background-color: white;
   color: #cc5803;
-  font-weight: 600;
 }
 
 header .header__image {
@@ -163,6 +111,7 @@ header .header__image {
   border: 2px solid #cc5803;
   border-radius: 20px;
   overflow: hidden;
+  max-width: 500px;
 }
 
 header .header__image .content {
@@ -205,43 +154,104 @@ header .header__image .content {
   }
 }
 
+nav {
+  width: 100vw;
+  background-color: #352918;
+  height: 80px;
+}
+
+nav .hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #cc5803;
+  background-image: url("../images/hamburgerClosed.svg");
+  cursor: pointer;
+}
+
+nav ul {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100vw - 60px);
+  height: 40px;
+  max-width: 500px;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  background-color: #cc5803;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 10;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #352918;
+}
+
 @media (max-width: 650px) {
-  header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header nav .hamburger {
+  nav .hamburger {
     display: block;
   }
-  header nav ul {
-    top: 135px;
-    left: 20px;
+  nav ul {
+    top: 160px;
+    right: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     width: 250px;
   }
-  header nav ul li {
+  nav ul li {
     width: 100%;
     background-color: #cc5803;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+  }
+  nav ul li:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  nav ul li:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   header .header__image {
     width: 90vw;
-    margin-top: 0px;
   }
 }
 
 @media (max-width: 950px) {
   header .header__description h1 {
-    margin-top: 50px;
     font-size: 30px;
   }
-  header .header__description h2, header .header__description button {
+  header .header__description h2,
+  header .header__description button {
     font-size: 16px;
   }
 }

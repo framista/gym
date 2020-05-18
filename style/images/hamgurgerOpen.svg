@@ -54,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,22 +64,22 @@
      id="layer1"
      transform="translate(0,-286.41665)">
     <path
-       style="fill:none;stroke:#cc5803;stroke-width:0.79340696;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#ffffff;stroke-width:0.79340696;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1.4699824,288.74605 8.1183118,3.20725"
        id="path815"
        inkscape:connector-curvature="0"
        inkscape:path-effect="#path-effect817"
        inkscape:original-d="m 1.4699824,288.74605 c 2.7397773,-0.0225 8.1183118,3.20725 8.1183118,3.20725"
-       transform="matrix(-0.75011419,0,0,1.3050283,9.4391517,-89.247756)"
+       transform="matrix(0.75011419,0,0,1.0350651,1.1441816,-10.482355)"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#cc5803;stroke-width:0.79340696;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#ffffff;stroke-width:0.79340696;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1.4699824,288.74605 8.1183118,3.20725"
        id="path815-2"
        inkscape:connector-curvature="0"
        inkscape:path-effect="#path-effect817-9"
        inkscape:original-d="m 1.4699824,288.74605 c 2.7397773,-0.0225 8.1183118,3.20725 8.1183118,3.20725"
-       transform="matrix(0.7501142,0,0,1.3050283,1.1441815,-85.062206)"
+       transform="matrix(-0.7501142,0,0,1.0350651,9.4391518,-7.1626424)"
        sodipodi:nodetypes="cc" />
   </g>
 </svg>
