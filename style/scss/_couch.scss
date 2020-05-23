@@ -1,0 +1,32 @@
+.couch{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px 0px;
+    background: linear-gradient(10deg, $lightBrown 0%, $darkBrown 45%, $darkBrown 55%, $lightBrown 80%);
+    .card{
+        margin: 10px auto;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(345deg, $darkYellow 0%, $orange 50%);
+        img{
+            width: 300px;
+        }
+        .card--content{
+            font-family: $font-stack;
+            margin: 10px;
+            text-align: center;
+            h1{
+                font-size: 24px;
+            }
+            p{
+                padding: 10px;
+                line-height: 1.4;
+                font-size: 14px;
+            }
+        }
+        
+    }
+}

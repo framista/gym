@@ -49,6 +49,7 @@ header .header__description {
   color: white;
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
   padding: 0px 30px;
+  max-width: 50vw;
 }
 
 header .header__description h1 {
@@ -155,9 +156,9 @@ header .header__image .content {
 }
 
 nav {
-  width: 100vw;
   background-color: #352918;
   height: 80px;
+  position: relative;
 }
 
 nav .hamburger {
@@ -208,6 +209,99 @@ nav ul li a:hover {
   color: #352918;
 }
 
+.about {
+  text-align: center;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 50px auto;
+}
+
+.about p {
+  margin: 10px 60px 60px;
+  max-width: 1400px;
+  line-height: 1.6;
+}
+
+.about .about--gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  grid-auto-rows: 300px;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  margin: 20px 50px;
+}
+
+.about .about--gallery div {
+  position: relative;
+  overflow: hidden;
+}
+
+.about .about--gallery .vertical {
+  -ms-grid-row: span 2;
+      grid-row-start: span 2;
+}
+
+.couch {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 40px 0px;
+  background: linear-gradient(10deg, rgba(135, 104, 60, 0.451155) 0%, #352918 45%, #352918 55%, rgba(135, 104, 60, 0.451155) 80%);
+}
+
+.couch .card {
+  margin: 10px auto;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(345deg, #f7b05b 0%, #cc5803 50%);
+}
+
+.couch .card img {
+  width: 300px;
+}
+
+.couch .card .card--content {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  margin: 10px;
+  text-align: center;
+}
+
+.couch .card .card--content h1 {
+  font-size: 24px;
+}
+
+.couch .card .card--content p {
+  padding: 10px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+@media (max-width: 950px) {
+  header .header__description h1 {
+    font-size: 30px;
+  }
+  header .header__description h2,
+  header .header__description button {
+    font-size: 16px;
+  }
+  .about .about--gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .couch {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 650px) {
   nav .hamburger {
     display: block;
@@ -244,15 +338,9 @@ nav ul li a:hover {
   header .header__image {
     width: 90vw;
   }
-}
-
-@media (max-width: 950px) {
-  header .header__description h1 {
-    font-size: 30px;
-  }
-  header .header__description h2,
-  header .header__description button {
-    font-size: 16px;
+  .about .about--gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

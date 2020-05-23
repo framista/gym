@@ -1,3 +1,27 @@
+
+@media (max-width: 950px) {
+  header {
+    .header__description {
+      h1 {
+        font-size: 30px;
+      }
+      h2,
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+  .about {
+    .about--gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .couch {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 @media (max-width: 650px) {
   nav {
     .hamburger {
@@ -13,11 +37,11 @@
         background-color: $orange;
         padding: 10px;
         text-align: center;
-        &:first-child{
+        &:first-child {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
         }
-        &:last-child{
+        &:last-child {
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
         }
@@ -30,18 +54,9 @@
       width: 90vw;
     }
   }
-}
-
-@media (max-width: 950px) {
-  header {
-    .header__description {
-      h1 {
-        font-size: 30px;
-      }
-      h2,
-      button {
-        font-size: 16px;
-      }
+  .about {
+    .about--gallery {
+      grid-template-columns: 1fr;
     }
   }
 }
