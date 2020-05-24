@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;900&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         <div class="header__description">
             <h1>Zmień siebie</h1>
             <h2>Zbuduj znami sylwetkę, o której zawsze marzyłeś. Z nami osiągniesz swój cel w ekspresowym tempie.
-                Uzyskaj z nami niesamowite wyniki. Nie czekaj, działaj od teraz.</h2>
+                Uzyskaj z nami niesamowite wyniki. Nie czekaj, już działaj.</h2>
             <button>Dołącz teraz</button>
         </div>
         <div class="header__image">
@@ -85,7 +86,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="couch" id="couches">
         <div class="card">
             <img
@@ -114,6 +115,45 @@
                     przestrzeganie go będzie łatwością.</p>
             </div>
         </div>
+    </div>
+
+    <div class="socialMedia">
+        <h1>Znajdź nas na swoich ulubionych social mediach</h1>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/?hl=pl" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-instagram"></span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/explore" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-twitter"></class=></span>
+                </a>
+            </li>
+            <li>
+                <a href="https://pl.linkedin.com/" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li>
+        </ul>
+
     </div>
 
     <div class="price" id="price">
@@ -158,44 +198,32 @@
         </div>
     </div>
 
-    <div class="socialMedia" id="contact">
-        <ul>
-            <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-facebook"></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/?hl=pl" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-instagram"></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/explore" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-twitter"></class=></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://pl.linkedin.com/" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-linkedin"></span>
-                </a>
-            </li>
-        </ul>
-
+    <div class="contact" id="contact">
+        <div class="content">
+            <p>Masz wątpliwości, chcesz się więcej dowiedzieć o naszej działalności? A może chcesz się zapisać online na treningi? Śmiało, prześlij pytanie, a my doradzimy, która oferta będzie dla Ciebie najlepsza.</p>
+        </div>
+        <form>
+            <div>
+                <label>Imię i nazwisko</label>
+                <input type="text" placeholder="Twoje imię i nazwisko"/>
+            </div>
+            <div>
+                <label>Twój email</label>
+                <input type="email" placeholder="Twój email"/>
+            </div>
+            <div>
+                <label>Temat</label>
+                <input type="text" placeholder="Temat"/>
+            </div>
+            <div>
+                <label>Treść</label>
+                <textarea placeholder="Tutaj możesz śmiało o wszystko pytać" rows="4"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Wyślij"  />
+            </div>
+        </form>
     </div>
-
 
     <script src="./src/app.js" async defer></script>
 </body>

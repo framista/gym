@@ -4,14 +4,20 @@
 }
 
 .socialMedia {
+    h1{
+        font-family: $font-stack;
+        font-weight: 600;
+        font-size: 48px;
+        text-align: center;
+        padding: 20px;
+    }
     ul {
         display: flex;
         justify-content: space-evenly;
         max-width: 1000px;
         margin: 0 auto;
         list-style: none;
-        padding: 80px 10px 50px;
-
+        padding: 40px 10px 50px;
         li {
             position: relative;
             transform: rotate(-10deg) skew(20deg);
