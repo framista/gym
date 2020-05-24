@@ -5,6 +5,7 @@ const email = document.querySelector('#email');
 const topic = document.querySelector('#topic');
 const text = document.querySelector('#text');
 const submitBtn = document.querySelector('input:nth-child(1)');
+const joinBtn = document.querySelector('button:nth-child(3)');
 const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 hamburger.addEventListener('click', () => {
@@ -24,22 +25,23 @@ function setHamburger() {
 
 submitBtn.addEventListener('click', e => {
     e.preventDefault();
-    let error = validateInput(name, name.value.length < 3);
+    let error = validateInput(name, name.value.trim().length < 3);
     error = validateInput(email, !email.value.match(mailformat)) || error;
-    error = validateInput(topic, topic.value.length < 3) || error;
-    error = validateInput(text, text.value.length < 15) || error;
+    error = validateInput(topic, topic.value.trim().length < 3) || error;
+    error = validateInput(text, text.value.trim().length < 15) || error;
     if (!error){
         console.log(error)
     }
 })
 
-name.addEventListener('input', () => validateInput(name, name.value.length < 3));
+name.addEventListener('input', () => validateInput(name, name.value.trim().length < 3));
 email.addEventListener('input', () => validateInput(email, !email.value.match(mailformat)));
-topic.addEventListener('input', () => validateInput(topic, topic.value.length < 3));
-text.addEventListener('input', () => validateInput(text, text.value.length < 15));
+topic.addEventListener('input', () => validateInput(topic, topic.value.trim().length < 3));
+text.addEventListener('input', () => validateInput(text, text.value.trim().length < 15));
 
 function validateInput(element, condition) {
     element.nextElementSibling.style.display = condition ? "block" : "none";
     return condition;
 }
 
+joinBtn.addEventListener('click', () => document.getElementById("contact").scrollIntoView());
