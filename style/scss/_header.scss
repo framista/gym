@@ -35,23 +35,7 @@ header {
             margin: 10px 0 20px;
         }
         button{
-            max-width: 400px;
-            border: none;
-            outline: none;
-            padding: 15px 20px;
-            border-radius: 50px;
-            background-color: $orange;
-            color: white;
-            font-weight: 300;
-            font-size: 20px;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: 1s linear;
-            &:hover{
-                background-color: white;
-                color: $orange;
-            }
+           @include button();
         }
     }
     .header__image {

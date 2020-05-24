@@ -1,9 +1,5 @@
 .couch{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 40px 0px;
+    @include centerElementsGrid(3);
     background: linear-gradient(10deg, $lightBrown 0%, $darkBrown 45%, $darkBrown 55%, $lightBrown 80%);
     .card{
         margin: 10px auto;

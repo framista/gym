@@ -284,7 +284,99 @@ nav ul li a:hover {
   font-size: 14px;
 }
 
+.price {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 40px 0px;
+}
+
+.price .card {
+  margin: 10px auto;
+  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 5px 30px 0px rgba(50, 50, 50, 0.87);
+          box-shadow: 2px 5px 30px 0px rgba(50, 50, 50, 0.87);
+  text-align: center;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price .card .content {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding: 20px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.price .card .content h1 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.price .card .content p {
+  padding: 20px;
+  font-size: 24px;
+}
+
+.price .card .content p span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.price .card .content ul {
+  list-style: none;
+}
+
+.price .card .content ul li {
+  font-size: 16px;
+}
+
+.price .card .content:hover {
+  background-color: #f7b05b;
+  color: white;
+}
+
+.price .card button {
+  max-width: 400px;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background-color: #cc5803;
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  margin: 10px 20px 20px;
+}
+
+.price .card button:hover {
+  background-color: white;
+  color: #cc5803;
+}
+
 @media (max-width: 950px) {
+  header .header__description {
+    max-width: 90vw;
+  }
   header .header__description h1 {
     font-size: 30px;
   }
@@ -296,7 +388,7 @@ nav ul li a:hover {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .couch {
+  .couch, .price {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }

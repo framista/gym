@@ -6,3 +6,31 @@ $orange: #cc5803;
 $lightOrange: #f7934c;
 $darkYellow: #f7b05b;
 $yellow: #ffc15e;
+
+@mixin centerElementsGrid($columns) {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: 20px;
+    padding: 40px 0px;
+}
+
+@mixin button() {
+    max-width: 400px;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    background-color: $orange;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 1s linear;
+    &:hover{
+        background-color: white;
+        color: $orange;
+    }
+}

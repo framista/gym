@@ -2,6 +2,7 @@
 @media (max-width: 950px) {
   header {
     .header__description {
+      max-width: 90vw;
       h1 {
         font-size: 30px;
       }
@@ -16,7 +17,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  .couch {
+  .couch, .price {
     grid-template-columns: 1fr;
   }
 }
