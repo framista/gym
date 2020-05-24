@@ -373,6 +373,77 @@ nav ul li a:hover {
   color: #cc5803;
 }
 
+.socialMedia ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 1000px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 80px 10px 50px;
+}
+
+.socialMedia ul li {
+  position: relative;
+  -webkit-transform: rotate(-10deg) skew(20deg);
+          transform: rotate(-10deg) skew(20deg);
+  width: 100px;
+  height: 100px;
+}
+
+.socialMedia ul li:hover span:nth-child(1) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 0.25;
+}
+
+.socialMedia ul li:hover span:nth-child(2) {
+  -webkit-transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
+  opacity: 0.5;
+}
+
+.socialMedia ul li:hover span:nth-child(3) {
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  opacity: 0.75;
+}
+
+.socialMedia ul li:hover span:nth-child(4) {
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+  opacity: 1;
+}
+
+.socialMedia ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 48px;
+}
+
+.socialMedia ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(35deg, #f7b05b 0%, #cc5803 50%);
+}
+
 @media (max-width: 950px) {
   header .header__description {
     max-width: 90vw;
