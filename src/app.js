@@ -24,15 +24,14 @@ function setHamburger() {
 }
 
 const processForm = form => {
-    const data = new FormData(form)
-    console.log(data)
+    const data = new FormData(form);
     data.append('form-name', 'newsletter');
     fetch('/', {
         method: 'POST',
         body: data,
     })
         .then(() => {
-            form.innerHTML = `<div class="form--success">Dziękujemy za wiadomość. Wkrótce odtrzymasz od nas odpowiedź.</div>`;
+            form.innerHTML = `<div class="form--success">Dziękujemy za wiadomość. Wkrótce otrzymasz od nas odpowiedź.</div>`;
         })
         .catch(error => {
             console.log(error)
