@@ -25,15 +25,17 @@ function setHamburger() {
 
 const processForm = form => {
     const data = new FormData(form)
+    console.log(data)
     data.append('form-name', 'newsletter');
     fetch('/', {
         method: 'POST',
         body: data,
     })
         .then(() => {
-            form.innerHTML = `<div class="form--success">Dziękuję za wiadomość. Wkrótce odtrzymasz od nas odpowiedź.</div>`;
+            form.innerHTML = `<div class="form--success">Dziękujemy za wiadomość. Wkrótce odtrzymasz od nas odpowiedź.</div>`;
         })
         .catch(error => {
+            console.log(error)
             form.innerHTML = `<div class="form--error">Niestety nie udało się przesłać wiadomości</div>`;
         })
 }
@@ -45,7 +47,7 @@ submitBtn.addEventListener('click', e => {
     error = validateInput(topic, topic.value.trim().length < 3) || error;
     error = validateInput(text, text.value.trim().length < 15) || error;
     if (!error) {
-        const form = document.querySelector('form');
+        const form = document.querySelector('.email-form');
         processForm(form);
     }
 })
