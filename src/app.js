@@ -25,6 +25,7 @@ function setHamburger() {
 
 const processForm = form => {
     const data = new FormData(form)
+    console.log(data)
     data.append('form-name', 'newsletter');
     fetch('/', {
         method: 'POST',
@@ -34,6 +35,7 @@ const processForm = form => {
             form.innerHTML = `<div class="form--success">Dziękujemy za wiadomość. Wkrótce odtrzymasz od nas odpowiedź.</div>`;
         })
         .catch(error => {
+            console.log(error)
             form.innerHTML = `<div class="form--error">Niestety nie udało się przesłać wiadomości</div>`;
         })
 }
