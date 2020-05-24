@@ -23,14 +23,30 @@ function setHamburger() {
     }
 }
 
+const processForm = form => {
+    const data = new FormData(form)
+    data.append('form-name', 'newsletter');
+    fetch('/', {
+        method: 'POST',
+        body: data,
+    })
+        .then(() => {
+            form.innerHTML = `<div class="form--success">Dziękuję za wiadomość. Wkrótce odtrzymasz od nas odpowiedź.</div>`;
+        })
+        .catch(error => {
+            form.innerHTML = `<div class="form--error">Niestety nie udało się przesłać wiadomości</div>`;
+        })
+}
+
 submitBtn.addEventListener('click', e => {
     e.preventDefault();
     let error = validateInput(name, name.value.trim().length < 3);
     error = validateInput(email, !email.value.match(mailformat)) || error;
     error = validateInput(topic, topic.value.trim().length < 3) || error;
     error = validateInput(text, text.value.trim().length < 15) || error;
-    if (!error){
-        console.log(error)
+    if (!error) {
+        const form = document.querySelector('form');
+        processForm(form);
     }
 })
 
