@@ -62,7 +62,7 @@ header .header__description h1 {
 }
 
 header .header__description h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: white;
   line-height: 1.6;
@@ -569,6 +569,12 @@ nav ul li a:hover {
 
 .contact form div textarea:focus {
   border: 1px solid #cc5803;
+}
+
+.contact form div p {
+  color: #cc5803;
+  font-size: 12px;
+  display: none;
 }
 
 @media (max-width: 950px) {

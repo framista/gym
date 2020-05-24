@@ -57,6 +57,11 @@
                     border: 1px solid $orange;
                 }
             }
+            p{
+                color: $orange;
+                font-size: 12px;
+                display: none;
+            }
         }
     }
 }
